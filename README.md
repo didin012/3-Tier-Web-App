@@ -1,4 +1,4 @@
-# Three Tier Web App Architecture
+# Three-Tier Web App Architecture
 ## Infrastructure
 ![image](https://github.com/didin012/Three-Tier-Web-App-Architecture/assets/104528282/740cb89a-0a90-47c6-851d-e041b0ab480b)
 
