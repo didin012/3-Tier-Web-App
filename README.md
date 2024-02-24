@@ -1,6 +1,43 @@
-# 3-Tier-Web-App
+# Three Tier Web App Architecture
+## Infrastructure
+![image](https://github.com/didin012/Three-Tier-Web-App-Architecture/assets/104528282/740cb89a-0a90-47c6-851d-e041b0ab480b)
 
-## Virtual Private Cloud
+## Definition
+Three-tier architecture divides software applications into three logical and physical computing tiers: the application tier, which processes data, the data tier, which stores and manages application-related data, and the presentation tier, which is the user interface. 
+
+### Presentation Tier
+The application's user interface and communication layer, or presentation tier, is where users interact with the program. Information display and data collection from the user are its primary goals. This top-level tier can operate, for instance, as a desktop application, graphical user interface (GUI), or web browser. JavaScript, HTML, and CSS are typically used in the development of web presentation tiers. Depending on the platform, desktop apps can be created in a wide range of languages.
+### Logic Tier
+The core of the application is the application tier, sometimes referred to as the middle tier or logic tier. This tier uses business logic, or a particular set of business rules, to process data gathered in the presentation tier, often cross-referencing it with data from the data tier. Data in the data tier may also be added, removed, or modified by the application tier. 
+
+It is commonly written in Python, Java, Perl, PHP, or Ruby, the application tier interfaces with the data tier through API calls.  On this project, we will use PHP.
+### Database Tier
+The data tier—also referred to as the database tier, data access tier, or back-end—is where the application's processed data is kept and organized. This could be a NoSQL database server like Cassandra, CouchDB, or MongoDB, or it could be a relational database management system like PostgreSQL, MySQL, MariaDB, Oracle, DB2, Informix, or Microsoft SQL Server. 
+
+All communication in a three-tier application occurs at the application tier. Direct communication between the data tier and the presentation tier is not possible.
+### Benefits of three-tier architecture
+**Faster development:** An company can launch the application more quickly and programmers can utilize the best and most recent languages and tools for each layer since each tier can be developed concurrently by various teams.
+
+**Enhanced scalability:** Each tier has the flexibility to scale separately from the others as required.
+
+**Enhanced dependability:** The likelihood of an interruption affecting one tier's availability or performance is reduced for the other levels.
+
+**Enhanced security:** Since there is no direct communication between the presentation and data tiers, a well-designed application tier can act as an internal firewall to stop SQL injections and other dangerous vulnerabilities.
+
+## On this Project you will be able to
+
+1. Create and assign accordingly the VPC, subnets, NAT Gateway, Internet Gateway, Elastic IP, and Security groups into the EC2 instances for network isolation.
+2. Configure instance specifications such as instance type, AMI selection, networking, and storage options.
+3. Understand how to SSH into EC2 instances using the public IP address provided by AWS.
+4. Learn about the syntax and options for the SSH command (e.g., specifying the private key file, username, and hostname).
+5. Be able to connect to other EC2 instances (app server) using front facing instance via NAT Gateway
+6. Install PHP and necessary PHP extensions using the package manager available on the chosen Linux distribution.
+7. Learn to deploy web servers like Apache HTTP Server or PHP on Amazon Linux (AMI) EC2 instances.
+8. Access the PHP file through a web browser to verify that PHP is executing correctly.
+9. Configure load balancers such as Application Load Balancing (ALB) to distribute incoming traffic among multiple web servers for high availability and scalability.
+6. Configuring Sticky Sessions in Application Load Balancers
+
+## First Step: Configuring Virtual Private Cloud and its Components
 1. Create a VPC
 
 ![image](https://github.com/didin012/Three-Tier-Web-App-Architecture/assets/104528282/dfc86661-fb1d-4220-9b95-8a35a39014a5)
